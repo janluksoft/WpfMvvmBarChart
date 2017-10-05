@@ -8,5 +8,8 @@ VS2017 and Target Framework: .NET Framework 4.6.1
 
 ![](WPF_Dynamic_charting.png)
 
+I have also included below a similar graphical illustration of the relationship between the main window and UserControl from where the application mechanism starts.
+
+![](WPF_UserControl_relationship.png) 
 
 
