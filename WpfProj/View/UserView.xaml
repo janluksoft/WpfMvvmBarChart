@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="WpfProj.View.UserView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfProj.View"
+
+             xmlns:dv="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+             xmlns:dvl="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <DockPanel>
+            <!-- https://wpf- -tutorial-com.translate.goog/datagrid-control/introduction/?_x_tr_sl=en&_x_tr_tl=pl&_x_tr_hl=pl&_x_tr_pto=sc -->
+
+            <DataGrid ItemsSource="{Binding Months}" Width="140" Margin="2,10,2,0" />
+
+            <dv:Chart Margin="2,2,5,5">
+
+                <dv:Chart.LegendStyle>
+                    <!-- Delete Legend -->
+                    <Style TargetType="dvl:Legend">
+                        <Setter Property="Width" Value="0"></Setter>
+                    </Style>
+                </dv:Chart.LegendStyle>
+
+                <dv:Chart.Series>
+                    <dv:ColumnSeries Title="Experience"
+                                  ItemsSource="{Binding Months}"
+                                  DependentValuePath="Value" 
+                                  IndependentValuePath="Period">
+                    </dv:ColumnSeries>
+                </dv:Chart.Series>
+            </dv:Chart>
+
+
+        </DockPanel>
+    </Grid>
+
+
+
+</UserControl>
