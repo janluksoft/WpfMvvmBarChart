@@ -7,13 +7,11 @@ namespace WpfProj.ViewModel
     {
         public ObservableCollection<UserPeriod> Months { get; set; }
 
-        //public RelayCommand DeleteCommand { get; set; }
         public UserPeriod SelectedUser { get; set; }
 
         public UserViewModel()
         {
             Months = LoadUsers();
-            //DeleteCommand = new RelayCommand(o => OnDelete(SelectedUser), o => CanDelete(SelectedUser));
         }
 
         private ObservableCollection<UserPeriod> LoadUsers()

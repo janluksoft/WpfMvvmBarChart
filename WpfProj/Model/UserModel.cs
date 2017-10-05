@@ -22,7 +22,6 @@ namespace WpfProj.Model
                 }
                 _period = value;
                 RaisePropertyChanged(nameof(Period));
-                //RaisePropertyChanged(nameof(FullName));
             }
         }
 
@@ -33,12 +32,8 @@ namespace WpfProj.Model
             {
                 _value = value;
                 RaisePropertyChanged(nameof(Value));
-                //RaisePropertyChanged(nameof(FullName));
             }
         }
-
-        //To gdy tylko zmieni się firstName lub lastName też jakby automatem się zmienia
-        //public string FullName => string.Concat(firstName, " ", lastName);
 
         private void RaisePropertyChanged(string propertyName)
         {

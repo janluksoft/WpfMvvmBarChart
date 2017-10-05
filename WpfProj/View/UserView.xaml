@@ -13,7 +13,6 @@
 
     <Grid>
         <DockPanel>
-            <!-- https://wpf- -tutorial-com.translate.goog/datagrid-control/introduction/?_x_tr_sl=en&_x_tr_tl=pl&_x_tr_hl=pl&_x_tr_pto=sc -->
 
             <DataGrid ItemsSource="{Binding Months}" Width="140" Margin="2,10,2,0" />
 
